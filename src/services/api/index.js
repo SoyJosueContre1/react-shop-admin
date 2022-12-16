@@ -9,10 +9,19 @@ const endPoints = {
         files: `${API}/api/${VERSION}/auth/files`,
     },
     products: {
-        getProduct: (id) => `${API}/api/${VERSION}/products/${id}`
+        getProduct: (id) => `${API}/api/${VERSION}/products/${id}/`,
+        getProducts: (limit, offset) => `${API}/api/${VERSION}/products?limit=${limit}&offset=${offset}`,
+        addProducts: `${API}/api/${VERSION}/products`,
+        updateProduct: (id) => `${API}/api/${VERSION}/products/${id}/`,
+        deleteProduct: (id) => `${API}/api/${VERSION}/products/${id}/`,
     },
     categories: {
-        getCategories: (id) => `${API}/api/${VERSION}/categories/${id}`,
-        getCategoriesProduct: (id) => `${API}/api/${VERSION}/categories/${id}/products`
+        getCategoriesList: `${API}/api/${VERSION}/categories/`,
+        addCategory: `${API}/api/${VERSION}/categories/`,
+        getCategoryItems: (id) => `${API}/api/${VERSION}/categories/${id}/products/`,
+        getCategory: (id) => `${API}/api/${VERSION}/categories/${id}`,
+    },
+    files: {
+        addImage: `${API}/api/${VERSION}/files/upload/`,
     }
 };
