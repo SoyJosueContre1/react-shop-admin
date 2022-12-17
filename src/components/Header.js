@@ -26,6 +26,7 @@ export default function Header() {
         name: auth?.user?.name,
         email: auth?.user?.email,
         imageUrl: `https://ui-avatars.com/api/?name=${auth?.user?.name}`,
+        // imageUrl: auth?.user?.avatar,
     };
 
     return (
