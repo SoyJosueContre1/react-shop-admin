@@ -1,3 +1,4 @@
+import { addProducts } from "@services/api/products";
 import { useRef } from "react";
 
 export default function FormProduct() {
@@ -13,7 +14,9 @@ export default function FormProduct() {
             categoryId: parseInt(formData.get('category')),
             images: [formData.get('images').name],
         };
-        console.log(data);
+        addProducts(data).then((response) => {
+            console.log(response);
+        });
     };
 
     return (
