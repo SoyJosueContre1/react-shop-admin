@@ -26,7 +26,7 @@ export default function Products() {
 
     return (
         <>
-            <Alert alert={alert} handleClose={handleClose} />
+            <Alert alert={alert} handleClose={toggleAlert} />
             <div className="lg:flex lg:items-center lg:justify-between mb-8">
                 <div className="min-w-0 flex-1">
                     <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
